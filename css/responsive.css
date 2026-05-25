@@ -1,0 +1,28 @@
+/* ============================================
+   responsive.css — Media Queries
+============================================ */
+
+/* ── Tablet & Below (≤900px) ── */
+@media (max-width: 900px) {
+  .hero-grid      { grid-template-columns: 1fr; }
+  .hero-image     { display: none; }       /* Hide photo on mobile */
+  .about-grid     { grid-template-columns: 1fr; }
+  .contact-grid   { grid-template-columns: 1fr; }
+  .exp-grid       { grid-template-columns: 1fr; }
+  .footer-grid    { grid-template-columns: 1fr 1fr; }
+
+  /* Hide desktop nav items */
+  .nav-links,
+  .nav-cta        { display: none; }
+  .hamburger      { display: flex; }
+}
+
+/* ── Mobile (≤600px) ── */
+@media (max-width: 600px) {
+  section         { padding: 70px 5%; }
+  .footer-grid    { grid-template-columns: 1fr; }
+  .form-row       { grid-template-columns: 1fr; }
+  .hero-stats     { flex-wrap: wrap; gap: 20px; }
+  .pricing-grid   { grid-template-columns: 1fr; }
+  .about-skills   { grid-template-columns: 1fr; }
+}

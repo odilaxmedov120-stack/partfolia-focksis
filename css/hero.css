@@ -1,0 +1,206 @@
+/* ============================================
+   hero.css — Hero Section & Ticker Band
+============================================ */
+
+/* ── Hero Section ── */
+.hero {
+  min-height: 100vh;
+  padding:    130px 5% 80px;
+  display:    flex;
+  align-items: center;
+  position:   relative;
+  overflow:   hidden;
+  gap: 300px;
+}
+
+/* Large background text */
+.hero-bg-text {
+  position:       absolute;
+  top: 50%; left: 50%;
+  transform:      translate(-50%, -50%);
+  font-family:    var(--font-heading);
+  font-size:      clamp(80px, 15vw, 200px);
+  font-weight:    800;
+  color:          rgba(255, 255, 255, 0.03);
+  white-space:    nowrap;
+  pointer-events: none;
+  letter-spacing: -5px;
+}
+.hero-real-img{
+  width: 100%;
+height: 100%;
+object-fit: cover;
+  border-radius: 30px;
+
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+}
+
+/* Two column layout */
+.hero-grid {
+  display:     grid;
+  grid-template-columns: 1fr 1fr;
+  gap:         60px;
+  align-items: center;
+  width:       100%;
+  position:    relative;
+  z-index:     2;
+}
+
+/* ── Left: Content ── */
+.hero-badge {
+  display:     inline-flex;
+  align-items: center;
+  gap:         8px;
+  background:  rgba(168, 255, 62, 0.1);
+  border:      1px solid rgba(168, 255, 62, 0.3);
+  border-radius: var(--btn-radius);
+  padding:     6px 16px;
+  font-size:   13px;
+  color:       var(--green);
+  margin-bottom: 24px;
+}
+.hero-badge::before {
+  content:    '';
+  width:      8px;
+  height:     8px;
+  background: var(--green);
+  border-radius: 50%;
+  animation:  pulse 1.5s infinite;
+}
+
+.hero h1 {
+  font-family:    var(--font-heading);
+  font-size:      clamp(36px, 5vw, 68px);
+  font-weight:    800;
+  line-height:    1.05;
+  letter-spacing: -2px;
+  margin-bottom:  20px;
+}
+.hero h1 .highlight { color: var(--green); }
+
+.hero p {
+  color:         var(--muted);
+  font-size:     16px;
+  line-height:   1.7;
+  max-width:     480px;
+  margin-bottom: 36px;
+}
+
+.hero-btns {
+  display:     flex;
+  gap:         16px;
+  align-items: center;
+  flex-wrap:   wrap;
+}
+
+/* Stats row */
+.hero-stats {
+  display:      flex;
+  gap:          32px;
+  margin-top:   48px;
+  padding-top:  32px;
+  border-top:   1px solid var(--border);
+}
+.stat-num {
+  font-family:    var(--font-heading);
+  font-size:      36px;
+  font-weight:    800;
+  color:          var(--green);
+  letter-spacing: -1px;
+}
+.stat-label {
+  color:     var(--muted);
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+/* ── Right: Image ── */
+.hero-image {
+  position:        relative;
+  display:         flex;
+  justify-content: center;
+}
+
+.hero-img-wrapper {
+  width:        420px;
+  height:       500px;
+  border-radius: 30px;
+  overflow:     hidden;
+  position:     relative;
+  background:   linear-gradient(135deg, #1a2a0a 0%, #0d1a05 100%);
+  border:       1px solid rgba(168, 255, 62, 0.2);
+}
+.hero-img-wrapper::before {
+  content:    '';
+  position:   absolute;
+  inset:      0;
+  background: radial-gradient(ellipse at 50% 100%, rgba(168, 255, 62, 0.15) 0%, transparent 70%);
+  z-index:    1;
+}
+
+.hero-avatar {
+  width:        100%;
+  height:       100%;
+  display:      flex;
+  align-items:  flex-end;
+  justify-content: center;
+  font-size:    220px;
+  line-height:  1;
+  overflow:     hidden;
+  position:     relative;
+  z-index:      2;
+}
+
+/* Floating info cards */
+.hero-floating-card {
+  position:    absolute;
+  background:  var(--card);
+  border:      1px solid var(--border);
+  border-radius: 16px;
+  padding:     14px 18px;
+  display:     flex;
+  align-items: center;
+  gap:         12px;
+  box-shadow:  0 20px 60px rgba(0, 0, 0, 0.5);
+  animation:   float 3s ease-in-out infinite;
+}
+.hero-floating-card.card1 { bottom: 40px; left: -40px; animation-delay: 0s; }
+.hero-floating-card.card2 { top: 60px;  right: -30px; animation-delay: 1s; }
+
+.floating-icon {
+  width:        40px;
+  height:       40px;
+  background:   rgba(168, 255, 62, 0.15);
+  border-radius: 10px;
+  display:      flex;
+  align-items:  center;
+  justify-content: center;
+  color:        var(--green);
+  font-size:    18px;
+}
+.floating-info .label { font-size: 11px; color: var(--muted); }
+.floating-info .val   { font-size: 14px; font-weight: 700; margin-top: 1px; }
+
+/* ── Ticker Band ── */
+.ticker {
+  padding:   18px 0;
+  background: var(--green);
+  overflow:  hidden;
+  white-space: nowrap;
+}
+.ticker-track {
+  display:   inline-flex;
+  animation: ticker 20s linear infinite;
+}
+.ticker-item {
+  color:          #000;
+  font-weight:    700;
+  font-size:      14px;
+  padding:        0 40px;
+  display:        flex;
+  align-items:    center;
+  gap:            16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.ticker-item::after { content: '★'; font-size: 12px; opacity: 0.6; }

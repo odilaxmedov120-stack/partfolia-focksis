@@ -1,0 +1,33 @@
+/* ============================================
+   variables.css — Global Design Tokens
+   All colors, fonts, and sizes in one place.
+   Edit here to retheme the entire site.
+============================================ */
+
+:root {
+  /* Colors */
+  --green:        #a8ff3e;
+  --green-dark:   #7acc1e;
+  --green-glow:   rgba(168, 255, 62, 0.35);
+
+  --bg:           #0a0a0a;   /* Page background */
+  --bg2:          #111111;   /* Alternate section background */
+  --bg3:          #161616;
+  --card:         #141414;   /* Card background */
+  --border:       #222222;   /* Default border color */
+
+  --text:         #ffffff;
+  --muted:        #888888;   /* Secondary text */
+
+  /* Typography */
+  --font-heading: 'Roboto', sans-serif;
+  --font-body:    'Space Grotesk', sans-serif;
+
+  /* Spacing */
+  --section-pad:  100px 5%;
+  --card-radius:  20px;
+  --btn-radius:   100px;
+
+  /* Transitions */
+  --transition:   0.3s ease;
+}

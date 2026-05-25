@@ -1,0 +1,237 @@
+/* ============================================
+   base.css — Reset, Body, Global Utilities
+============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:   var(--bg);
+  color:        var(--text);
+  font-family:  var(--font-body);
+  overflow-x:   hidden;
+  cursor:       none;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar          { width: 4px; }
+::-webkit-scrollbar-track    { background: var(--bg); }
+::-webkit-scrollbar-thumb    { background: var(--green); border-radius: 2px; }
+
+/* ── Utility Colors ── */
+.green { color: var(--green); }
+
+/* ── Shared Buttons ── */
+.btn-primary {
+  background:  var(--green);
+  color:       #000;
+  padding:     14px 32px;
+  border-radius: var(--btn-radius);
+  font-weight: 700;
+  font-size:   15px;
+  text-decoration: none;
+  display:     inline-flex;
+  align-items: center;
+  gap:         8px;
+  transition:  transform var(--transition), box-shadow var(--transition);
+}
+.btn-primary:hover {
+  transform:   translateY(-3px);
+  box-shadow:  0 12px 40px var(--green-glow);
+}
+
+.btn-outline {
+  border:       1.5px solid var(--border);
+  color:        var(--text);
+  padding:      14px 32px;
+  border-radius: var(--btn-radius);
+  font-weight:  600;
+  font-size:    15px;
+  text-decoration: none;
+  transition:   border-color var(--transition), color var(--transition);
+  display:      inline-flex;
+  align-items:  center;
+  gap:          8px;
+}
+.btn-outline:hover {
+  border-color: var(--green);
+  color:        var(--green);
+}
+
+/* ── Section Layout ── */
+section {
+  padding: var(--section-pad);
+}
+
+.section-tag {
+  display:        inline-flex;
+  align-items:    center;
+  gap:            8px;
+  color:          var(--green);
+  font-size:      13px;
+  font-weight:    600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom:  16px;
+}
+.section-tag::before {
+  content:    '';
+  width:      24px;
+  height:     2px;
+  background: var(--green);
+}
+
+h2.section-title {
+  font-family:    var(--font-heading);
+  font-size:      clamp(32px, 4vw, 52px);
+  font-weight:    800;
+  letter-spacing: -1.5px;
+  line-height:    1.1;
+}
+
+.section-header {
+  display:        flex;
+  justify-content: space-between;
+  align-items:    flex-end;
+  margin-bottom:  60px;
+  flex-wrap:      wrap;
+  gap:            20px;
+}
+
+.section-desc {
+  color:      var(--muted);
+  font-size:  16px;
+  line-height: 1.7;
+  max-width:  420px;
+}
+
+/* ── Custom Cursor ── */
+.cursor {
+  width:           12px;
+  height:          12px;
+  background:      var(--green);
+  border-radius:   50%;
+  position:        fixed;
+  top: 0; left: 0;
+  pointer-events:  none;
+  z-index:         9999;
+  mix-blend-mode:  difference;
+}
+
+.cursor-follower {
+  width:           36px;
+  height:          36px;
+  border:          1.5px solid var(--green);
+  border-radius:   50%;
+  position:        fixed;
+  top: 0; left: 0;
+  pointer-events:  none;
+  z-index:         9998;
+  transition:      opacity 0.3s;
+  opacity:         0.5;
+}
+
+/* ── Scroll to Top ── */
+.scroll-top {
+  position:       fixed;
+  bottom:         32px;
+  right:          32px;
+  width:          48px;
+  height:         48px;
+  background:     var(--green);
+  border-radius:  50%;
+  display:        flex;
+  align-items:    center;
+  justify-content: center;
+  color:          #000;
+  font-size:      20px;
+  cursor:         none;
+  opacity:        0;
+  pointer-events: none;
+  transition:     opacity 0.3s, transform 0.3s;
+  z-index:        500;
+}
+.scroll-top.show {
+  opacity:        1;
+  pointer-events: all;
+}
+.scroll-top:hover {
+  transform: translateY(-4px);
+}
+/* ==========================================================================
+   CLASSMATES & TEACHERS SECTIONS
+   ========================================================================== */
+
+/* Bo'limlarning umumiy foni va chekinishlari */
+.classmates, .teachers {
+  padding: 100px 0;
+  position: relative;
+  padding: 100px;
+}
+
+/* Rasm o'rab turuvchi konteyner */
+.portfolio-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 240px; /* Rasmlarning balandligi bir xil bo'lishi uchun fixed qiymat */
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  background-color: var(--card-bg, #1e1e1e); /* Rasm yuklanguncha ko'rinib turadigan fon */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Rasm effekti */
+.portfolio-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Rasmni cho'zib yubormasdan, maydonni chiroyli to'ldiradi */
+  object-position: center; /* Rasmdagi yuz qismlari markazda turishi uchun */
+  filter: grayscale(20%); /* Sayt stiliga mos qisqa kulrang tus (xohlasangiz o'chirish mumkin) */
+  transition: transform 0.6s ease, filter 0.4s ease;
+}
+
+/* Kartochkaga sichqoncha kelgandagi effekt (Hover) */
+.service-card:hover .portfolio-img-wrapper {
+  transform: translateY(-5px);
+}
+
+.service-card:hover .portfolio-img-wrapper img {
+  transform: scale(1.08); /* Rasm yaqinlashish effekti */
+  filter: grayscale(0%); /* Hover bo'lganda rasm to'liq rangli bo'ladi */
+}
+
+/* O'qituvchilar mutaxassisligi (strong tekst) uchun uslub */
+.service-card p strong {
+  color: #00ff66; /* Saytingizdagi yashil (green) urg'u rangi */
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Kichik tavsif matni */
+.service-card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Mobile va Planshetlar uchun moslashuvchanlik (Responsive) */
+@media (max-width: 768px) {
+  .classmates, .teachers {
+    padding: 60px 0;
+  }
+  
+  .portfolio-img-wrapper {
+    height: 200px; /* Mobil ekranlarda rasm balandligini biroz kichiklashtiramiz */
+  }
+}

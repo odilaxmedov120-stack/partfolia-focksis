@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdulaziz Umarov – Frontend Developer</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  
+  <!-- ========================
+  CUSTOM CURSOR
+  ======================== -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+  
+  <!-- ========================
+  MOBILE MENU
+  ======================== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+  </div>
+  
+  <!-- ========================
+  NAVIGATION
+  ======================== -->
+  <nav id="navbar">
+    <div class="nav-logo">AU<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Hire Me
+    </button>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+  
+  <!-- ========================
+  HERO SECTION
+  ======================== -->
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-badge">Frontend Developer</div>
+        
+        <h1>
+          I'm <span class="highlight">Abdulaziz Umarov,</span><br>
+          Frontend Developer<br>
+          based in Uzbekistan.
+        </h1>
+        
+        <p>
+          PDP School 7-B sinf o‘quvchisi. 2025-yildan beri PDP School’da o‘qiydi va
+          8 oydan beri frontend dasturlashni o‘rganadi. Zamonaviy va kreativ web
+          saytlar yaratishga qiziqadi.
+        </p>
+        
+        <div class="hero-btns">
+          <a href="#portfolio" class="btn-primary">
+            <i class="fas fa-eye"></i> View Portfolio
+          </a>
+          
+          <a href="#contact" class="btn-outline">
+            <i class="fas fa-paper-plane"></i> Let's Talk
+          </a>
+        </div>
+        
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-num">8+</div>
+            <div class="stat-label">Months Learning</div>
+          </div>
+          
+          <div class="stat-item">
+            <div class="stat-num">15+</div>
+            <div class="stat-label">Projects Done</div>
+          </div>
+          
+          <div class="stat-item">
+            <div class="stat-num">2025</div>
+            <div class="stat-label">Started Coding</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- HERO IMAGE -->
+      <div class="hero-image">
+        <div class="hero-img-wrapper">
+          <img
+          src="./src/laziz.jpg"
+          alt="Abdulaziz Umarov"
+          class="hero-real-img"
+          >
+        </div>
+        
+        <div class="hero-floating-card card1">
+          <div class="floating-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          
+          <div class="floating-info">
+            <div class="label">Frontend</div>
+            <div class="val">Developer</div>
+          </div>
+        </div>
+        
+        <div class="hero-floating-card card2">
+          <div class="floating-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          
+          <div class="floating-info">
+            <div class="label">Learning</div>
+            <div class="val">8 Months</div>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+  </section>
+  
+  <!-- ========================
+  TICKER BAND
+  ======================== -->
+  <div class="ticker">
+    <div class="ticker-track" id="tickerTrack">
+      <span class="ticker-item">UI/UX Design</span>
+      <span class="ticker-item">Web Design</span>
+      <span class="ticker-item">App Design</span>
+      <span class="ticker-item">Dashboard Design</span>
+      <span class="ticker-item">Wireframing</span>
+      <span class="ticker-item">Prototyping</span>
+      <span class="ticker-item">Brand Identity</span>
+      <span class="ticker-item">Product Design</span>
+      <span class="ticker-item">UI/UX Design</span>
+      <span class="ticker-item">Web Design</span>
+      <span class="ticker-item">App Design</span>
+      <span class="ticker-item">Dashboard Design</span>
+      <span class="ticker-item">Wireframing</span>
+      <span class="ticker-item">Prototyping</span>
+      <span class="ticker-item">Brand Identity</span>
+      <span class="ticker-item">Product Design</span>
+    </div>
+  </div>
+  
+  <!-- ========================
+  SERVICES SECTION
+  ======================== -->
+  <section class="services" id="services">
+    <div class="section-header">
+      <div>
+        <div class="section-tag reveal">Mening Yo‘nalishlarim</div>
+        
+        <h2 class="section-title reveal">
+          Men Taklif Qiladigan <span class="green">Xizmatlar</span>
+        </h2>
+      </div>
+      
+      <p class="section-desc reveal">
+        Men sizning biznesingiz uchun zamonaviy va sifatli dizayn xizmatlarini taklif qilaman.
+      </p>
+    </div>
+    
+    <div class="services-grid">
+      
+      <div class="service-card reveal">
+        <div class="service-num">01</div>
+        
+        <div class="service-icon">
+          <i class="fas fa-pen-ruler"></i>
+        </div>
+        
+        <h3>UI/UX Dizayn</h3>
+        
+        <p>
+          Barcha platformalar uchun qulay va chiroyli foydalanuvchi interfeyslarini yarataman.
+        </p>
+      </div>
+      
+      <div class="service-card reveal">
+        <div class="service-num">02</div>
+        
+        <div class="service-icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        
+        <h3>Ilova Dizayni</h3>
+        
+        <p>
+          Mobil va web ilovalar uchun zamonaviy hamda qulay interfeyslar yarataman.
+        </p>
+      </div>
+      
+      <div class="service-card reveal">
+        <div class="service-num">03</div>
+        
+        <div class="service-icon">
+          <i class="fas fa-globe"></i>
+        </div>
+        
+        <h3>Website Dizayni</h3>
+        
+        <p>
+          Zamonaviy va professional ko‘rinishga ega web saytlar yarataman.
+        </p>
+      </div>
+      
+      <div class="service-card reveal">
+        <div class="service-num">04</div>
+        
+        <div class="service-icon">
+          <i class="fas fa-chart-bar"></i>
+        </div>
+        
+        <h3>Dashboard Dizayni</h3>
+        
+        <p>
+          Murakkab ma’lumotlarni tushunarli ko‘rinishda aks ettiruvchi dashboardlar ishlab chiqaman.
+        </p>
+      </div>
+      
+      <div class="service-card reveal">
+        <div class="service-num">05</div>
+        
+        <div class="service-icon">
+          <i class="fas fa-vector-square"></i>
+        </div>
+        
+        <h3>Wireframe Yaratish</h3>
+        
+        <p>
+          Loyihaning tuzilmasi va foydalanuvchi yo‘nalishlarini aniq rejalashtiraman.
+        </p>
+      </div>
+      
+      <div class="service-card reveal">
+        <div class="service-num">06</div>
+        
+        <div class="service-icon">
+          <i class="fas fa-palette"></i>
+        </div>
+        
+        <h3>Brend Dizayni</h3>
+        
+        <p>
+          Logo, ranglar va umumiy vizual uslub orqali kuchli brend identifikatsiyasini yarataman.
+        </p>
+      </div>
+      
+    </div>
+  </section>
+  
+  <!-- ========================
+  ABOUT SECTION
+  ======================== -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      
+      <!-- IMAGE -->
+      <div class="about-image reveal">
+        <div class="about-img-bg">
+          
+          <img
+          src="./src/laziz.jpg"
+          alt="Abdulaziz Umarov"
+          class="hero-real-img"
+          >
+          
+          <div class="about-exp-badge">
+            <span class="num">8+</span>
+            <span class="txt">Oylik<br>Tajriba</span>
+          </div>
+          
+        </div>
+      </div>
+      
+      <!-- CONTENT -->
+      <div class="about-content">
+        
+        <div class="section-tag reveal">
+          Men Haqimda
+        </div>
+        
+        <h2 class="section-title reveal">
+          <span class="green">Abdulaziz Umarov</span> 
+        </h2>
+        
+        <p class="reveal">
+          Men frontend dasturlashga qiziqadigan yosh dasturchiman.
+          PDP School 7-B sinfida o‘qiyman va 2025-yildan beri
+          dasturlashni o‘rganib kelaman.
+        </p>
+        
+        <p class="reveal">
+          Hozirda HTML, CSS va JavaScript texnologiyalarini
+          o‘rganmoqdaman. Zamonaviy, responsive va kreativ
+          web saytlar yaratishga katta qiziqishim bor.
+        </p>
+        
+        <!-- SKILLS -->
+        <!-- <div class="about-skills reveal">
+          
+          <div class="skill-item">
+            <div class="skill-label">
+              <span>HTML</span>
+              <span>95%</span>
+            </div>
+            
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="95"></div>
+            </div>
+          </div>
+          
+          <div class="skill-item">
+            <div class="skill-label">
+              <span>CSS</span>
+              <span>90%</span>
+            </div>
+            
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="90"></div>
+            </div>
+          </div>
+          
+          <div class="skill-item">
+            <div class="skill-label">
+              <span>JavaScript</span>
+              <span>75%</span>
+            </div>
+            
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="75"></div>
+            </div>
+          </div>
+          
+          <div class="skill-item">
+            <div class="skill-label">
+              <span>Responsive Design</span>
+              <span>85%</span>
+            </div>
+            
+            <div class="skill-bar">
+              <div class="skill-fill" data-width="85"></div>
+            </div>
+          </div>
+          
+        </div> -->
+        
+        <!-- <div style="margin-top:36px" class="reveal">
+          <a href="#contact" class="btn-primary">
+            Men bilan bog‘laning
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div> -->
+        
+      </div>
+    </div>
+  </section>
+  <!-- ======================== HOBBIES SECTION ======================== -->
+  <section class="hobbies" id="hobbies">
+    <div class="section-header">
+      <div>
+        <div class="section-tag reveal">Mening Qiziqishlarim</div>
+        <h2 class="section-title reveal">
+          Men Sevadigan <span class="green">Hobbilari</span>
+        </h2>
+      </div>
+      <p class="section-desc reveal">
+        Bo‘sh vaqtimda men o‘zimni rivojlantiradigan va dam beradigan mashg‘ulotlar bilan shug‘ullanaman.
+      </p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-code"></i></div>
+        <h3>Programming</h3>
+        <p>Frontend kod yozish va yangi texnologiyalar o‘rganish.</p>
+      </div>
+      
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-gamepad"></i></div>
+        <h3>Gaming</h3>
+        <p>Bo‘sh vaqtda strategik va multiplayer o‘yinlar o‘ynayman.</p>
+      </div>
+      
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-music"></i></div>
+        <h3>Music</h3>
+        <p>Musiqa tinglash menga motivatsiya beradi.</p>
+      </div>
+      
+      <div class="service-card reveal">
+        <div class="service-icon"><i class="fas fa-basketball"></i></div>
+        <h3>Basketball</h3>
+        <p>Do‘stlar bilan basketbol o‘ynashni yaxshi ko‘raman.</p>
+      </div>
+    </div>
+  </section>
+  <!-- ======================== FAMILY SECTION ======================== -->
+  <section class="family" id="family">
+    <div class="section-header">
+      <div>
+        <div class="section-tag reveal">Mening Oilam</div>
+        <h2 class="section-title reveal">
+          Oilam — mening <span class="green">kuchim</span>
+        </h2>
+      </div>
+      <p class="section-desc reveal">
+        Men oilamni juda qadrlayman, ular menga har doim qo‘llab-quvvat beradi.
+      </p>
+    </div>
+    
+    <div class="oila__cover-img">
+      <img src="./src/oila.jpg" alt="" class="oila__img">
+    </div>
+  </section>
+  
+  
+  <!-- ========================
+  CLASSMATES SECTION
+  ======================== -->
+  <section class="classmates" id="classmates">
+    <div class="section-header">
+      <div>
+        <div class="section-tag reveal">Mening Sinfdoshlarim</div>
+        <h2 class="section-title reveal">
+          Bizning <span class="green">7-B Sinf</span> Jamoasi
+        </h2>
+      </div>
+      <p class="section-desc reveal">
+        PDP School’dagi birga tahsil oladigan, ahil va doimo bir-birini qo‘llab-quvvatlaydigan sinfdoshlarim.
+      </p>
+    </div>
+    
+    <!-- Sinfdoshlar ro'yxati -->
+    <ul class="services-grid">
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/ali.jpg" alt="Asadbek Olimov" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="service-num">01</div>
+        <h3>Muhammadali</h3>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/alisher.jpg" alt="Zilola Karimova" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="service-num">02</div>
+        <h3>Alisher</h3>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/bilol.jpg" alt="Jasur Rahimov" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="service-num">03</div>
+        <h3>Bilol</h3>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/hz.jpg" alt="Madina Axmedova" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="service-num">04</div>
+        <h3>Abdulaziz</h3>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/lazizabdu.jpg" alt="Sardor Karimov" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="service-num">05</div>
+        <h3>Laziz</h3>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/meloch.jpg" alt="Laylo Toaliyeva" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="service-num">06</div>
+        <h3>Muhammad Yusuf</h3>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/noname.jpg" alt="Bekzod Aliyev" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="service-num">07</div>
+        <h3>Habibullox</h3>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/noname2.jpg" alt="Shaxzoda Umarova" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="service-num">08</div>
+        <h3>Hojiakbar</h3>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/odil.jpg" alt="Diyorbek Hasanov" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="service-num">09</div>
+        <h3>Odil</h3>
+        <p></p>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/sarvar.jpg" alt="Kamola Sultonova" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="service-num">10</div>
+        <h3>Sarvar</h3>
+      </li>
+
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/sarvar.jpg" alt="Kamola Sultonova" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="service-num">11</div>
+        <h3>Samandar</h3>
+      </li>
+    </ul>
+  </section>
+  
+  <!-- ========================
+  TEACHERS SECTION
+  ======================== -->
+  <section class="teachers" id="teachers">
+    <div class="section-header">
+      <div>
+        <div class="section-tag reveal">Mening Ustozlarim</div>
+        <h2 class="section-title reveal">
+          Bizga Ta'lim Beradigan <span class="green">8 Nafar O‘qituvchi</span>
+        </h2>
+      </div>
+      <p class="section-desc reveal">
+        Bizga har tomonlama chuqur bilim berib, kelajakka tayyorlayotgan qadrli ustozlarimiz.
+      </p>
+    </div>
+    
+    <!-- O'qituvchilar ro'yxati -->
+    <ul class="services-grid">
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/naima.jpg" alt="Gulnoza Mansurova" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Naima Ro'ziyeva</h3>
+        <p><strong>Sinf rahbari</strong></p>
+        <p>Bizning har bir yutug'imizda katta mehnatlari bor mehribon ustozimiz.</p>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/samanta.JPG" alt="Farhod Nizomov" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Shahlo Rustamovna</h3>
+        <p><strong>Ingliz tili fani o'qituvchisi</strong></p>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/iroda.JPG" alt="Rustam G‘ofurov" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Iroda Safarovna</h3>
+        <p><strong> Uslubchi metodist</strong></p>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/saodat.JPG" alt="Dilnoza Isoqova" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Hasanova Saodat</h3>
+        <p><strong>O'quv ishlari bo'yicha direktor o'rinbosari</strong></p>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/otabek.JPG" alt="Shirin Qodirova" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Otabek Xo'shbboqov</h3>
+        <p><strong>Matematika ustozi</strong></p>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/elyor.JPG" alt="Olimjon Toshmatov" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Elyorjon Karimov</h3>
+        <p><strong>Tarix ustozi</strong></p>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/dilmurod.JPG" alt="Eldor Alimov" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Dilmurod Abdualiev</h3>
+        <p><strong>Fizika ustozi</strong></p>
+      </li>
+      
+      <li class="service-card reveal">
+        <div class="portfolio-img-wrapper" style="margin-bottom: 20px; border-radius: 12px; overflow: hidden; height: 200px;">
+          <img src="./src/zoyidjon.JPG" alt="Zuhra Baxtiyorova" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3>Nasretdinov Zoyidjon</h3>
+        <p><strong>Front-End ustozi</strong></p>
+      </li>
+    </ul>
+  </section>
+  <!-- ========================
+  TOOLS SECTION
+  ======================== -->
+  <section class="tools" id="tools">
+    
+    <div class="section-header">
+      <div>
+        <div class="section-tag reveal">
+          Mening Texnologiyalarim
+        </div>
+        
+        <h2 class="section-title reveal">
+          Men Ishlatadigan<br>
+          <span class="green">Texnologiyalar</span>
+        </h2>
+      </div>
+    </div>
+    
+    <div class="tools-grid">
+      
+      <div class="tool-card reveal">
+        <i class="fab fa-html5"></i>
+        <span>HTML</span>
+      </div>
+      
+      <div class="tool-card reveal">
+        <i class="fab fa-css3-alt"></i>
+        <span>CSS</span>
+      </div>
+      
+      <div class="tool-card reveal">
+        <i class="fab fa-js"></i>
+        <span>JavaScript</span>
+      </div>
+      
+      <div class="tool-card reveal">
+        <i class="fab fa-bootstrap"></i>
+        <span>Bootstrap</span>
+      </div>
+      
+      <div class="tool-card reveal">
+        <i class="fab fa-github"></i>
+        <span>GitHub</span>
+      </div>
+      
+      <div class="tool-card reveal">
+        <i class="fas fa-code"></i>
+        <span>VS Code</span>
+      </div>
+      
+      <div class="tool-card reveal">
+        <i class="fab fa-figma"></i>
+        <span>Figma</span>
+      </div>
+      
+      <div class="tool-card reveal">
+        <i class="fas fa-mobile-alt"></i>
+        <span>Responsive Design</span>
+      </div>
+      
+    </div>
+    
+  </section>
+  <!-- ========================
+  PORTFOLIO SECTION
+  ======================== -->
+  <section class="portfolio" id="portfolio">
+    
+    <div class="section-header">
+      <div>
+        <div class="section-tag reveal">Mening loyihalarim</div>
+        <h2 class="section-title reveal">Bu mening<br><span class="green">Loyihalarim</span></h2>
+      </div>
+      <a href="#" class="btn-outline reveal">View All Work <i class="fas fa-arrow-right"></i></a>
+    </div>
+    <div class="portfolio-tabs reveal">
+      <button class="tab-btn active" onclick="filterPortfolio('all', this)">All Work</button>
+      <button class="tab-btn" onclick="filterPortfolio('web', this)">Web Design</button>
+    </div>
+    <div class="portfolio-grid">
+      
+      <a href="https://legendary-nougat-7aa57e.netlify.app/" target="_blank" class="project__card"
+      data-aos="zoom-in" data-aos-delay="100">
+      <div class="portfolio-card reveal" data-cat="web">
+        <img src="./src/emoojii.jpg" alt="loyiha" class="portfolio-img project__img">
+        <div class="portfolio-info">
+          <div class="portfolio-tag">Emoji Project</div>
+          <h3>Emoji Generator Web App</h3>
+          <p>Oddiy va qiziqarli emoji generator loyihasi. Foydalanuvchi turli emoji’larni tez va oson tanlab
+            ishlata oladi.</p>
+          </div>
+        </div>
+      </a>
+      
+      <a href="https://lighthearted-paprenjak-e84128.netlify.app/" target="_blank" class="project__card"
+      data-aos="zoom-in" data-aos-delay="100">
+      <img src="./src/movies.jpg" alt="loyiha" class="portfolio-img project__img">
+      <div class="portfolio-info">
+        <div class="portfolio-tag">Movie App</div>
+        <h3>Movie Listing Website</h3>
+        <p>Filmlar ro‘yxatini ko‘rsatadigan web loyiha. Foydalanuvchi film haqida ma’lumotlarni ko‘ra oladi.</p>
+      </div>
+    </a>
+    
+    <a href="https://funny-sopapillas-c845b3.netlify.app/" target="_blank" class="project__card"
+    data-aos="zoom-in" data-aos-delay="100">
+    <img src="./src/coffeee.png" alt="loyiha" class="portfolio-img project__project__img">
+    <div class="portfolio-info">
+      <div class="portfolio-tag">Coffee Shop</div>
+      <h3>Coffee Landing Page</h3>
+      <p>Kofe do‘koni uchun yaratilgan landing page. Chiroyli dizayn va mahsulotlarni tanishtirish uchun
+        mo‘ljallangan.</p>
+      </div>
+    </a>
+    
+    <a href="https://playstation-omega.vercel.app/" target="_blank" class="project__card" data-aos="zoom-in"
+    data-aos-delay="100">
+    <img src="./src/photo_2026-04-23_14-00-26.jpg" alt="loyiha" class="portfolio-img project__img">
+    <div class="portfolio-info">
+      <div class="portfolio-tag">Gaming UI</div>
+      <h3>PlayStation Landing Page</h3>
+      <p>PlayStation uchun zamonaviy dizayndagi landing page. O‘yinlar va reklama kontenti uchun yaratilgan.</p>
+    </div>
+  </a>
+  
+  <a href="https://carusel-vb77.vercel.app/" target="_blank" class="project__card" data-aos="zoom-in"
+  data-aos-delay="100">
+  <img src="./src/photo_2026-04-23_14-00-47.jpg" alt="loyiha" class="portfolio-img project__img">
+  <div class="portfolio-info">
+    <div class="portfolio-tag">Carousel UI</div>
+    <h3>Image Carousel Project</h3>
+    <p>Rasmlar uchun carousel dizayn. Interaktiv va silliq o‘tish animatsiyalari bilan yaratilgan.</p>
+  </div>
+</a>
+
+<a href="https://bright-mandazi-8e2fb8.netlify.app/" target="_blank" class="project__card" data-aos="zoom-in"
+data-aos-delay="100">
+<img src="./src/photo_2026-04-23_14-02-04.jpg" alt="loyiha" class="portfolio-img project__img">
+<div class="portfolio-info">
+  <div class="portfolio-tag">Landing Page</div>
+  <h3>Modern Landing Page</h3>
+  <p>Zamonaviy va minimal dizayndagi landing page. Turli kontentlarni chiroyli ko‘rsatish uchun yaratilgan.
+  </p>
+</div>
+</a>
+
+</div>
+
+
+</section>
+
+<!-- ========================
+EXPERIENCE SECTION
+======================== -->
+<!-- <section class="experience" id="experience">
+  <div class="section-header">
+    <div>
+      <div class="section-tag reveal">My Journey</div>
+      <h2 class="section-title reveal">My Academic &<br><span class="green">Professional Journey</span></h2>
+    </div>
+  </div>
+  <div class="exp-grid">
+    <div class="exp-col">
+      <h3 class="reveal"><i class="fas fa-graduation-cap"></i> Education</h3>
+      <div class="exp-item reveal">
+        <div class="exp-year">2016 – 2020</div>
+        <div class="exp-title">Bachelor of Design</div>
+        <div class="exp-org">Harmony Institute, New York</div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-year">2020 – 2022</div>
+        <div class="exp-title">Master's in UX Design</div>
+        <div class="exp-org">Aurora Academy, San Francisco</div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-year">2022</div>
+        <div class="exp-title">Google UX Design Certificate</div>
+        <div class="exp-org">Coursera / Google</div>
+      </div>
+    </div>
+    <div class="exp-col">
+      <h3 class="reveal"><i class="fas fa-briefcase"></i> Work Experience</h3>
+      <div class="exp-item reveal">
+        <div class="exp-year">2020 – 2022</div>
+        <div class="exp-title">Junior Product Designer</div>
+        <div class="exp-org">NightBear Studio, Remote</div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-year">2022 – 2023</div>
+        <div class="exp-title">Senior UI/UX Designer</div>
+        <div class="exp-org">Self Employed</div>
+      </div>
+      <div class="exp-item reveal">
+        <div class="exp-year">2023 – Present</div>
+        <div class="exp-title">Lead Product Designer</div>
+        <div class="exp-org">KG Graphics Studio</div>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+<!-- ========================
+PRICING SECTION
+======================== -->
+<!-- <section class="pricing" id="pricing">
+  <div class="section-header">
+    <div>
+      <div class="section-tag reveal">Pricing Plan</div>
+      <h2 class="section-title reveal">My <span class="green">Pricing</span> Model</h2>
+    </div>
+    <p class="section-desc reveal">Transparent pricing with no hidden fees. Choose the plan that fits your project.</p>
+  </div>
+  <div class="pricing-grid">
+    <div class="pricing-card reveal">
+      <div class="pricing-plan">Starter</div>
+      <div class="pricing-price"><span>$</span>80<small>/mo</small></div>
+      <div class="pricing-period">Perfect for small projects</div>
+      <ul class="pricing-features">
+        <li>1 Design Project</li>
+        <li>UI/UX Design</li>
+        <li>Source Files</li>
+        <li>2 Revisions</li>
+        <li>5 Days Delivery</li>
+      </ul>
+      <a href="#contact" class="btn-pricing btn-pricing-outline">Get Started</a>
+    </div>
+    <div class="pricing-card popular reveal">
+      <div class="popular-badge">Popular</div>
+      <div class="pricing-plan">Professional</div>
+      <div class="pricing-price"><span>$</span>600<small>/mo</small></div>
+      <div class="pricing-period">Best for growing businesses</div>
+      <ul class="pricing-features">
+        <li>5 Design Projects</li>
+        <li>UI/UX + Branding</li>
+        <li>Source Files + Handoff</li>
+        <li>Unlimited Revisions</li>
+        <li>Priority Support</li>
+        <li>3 Days Delivery</li>
+      </ul>
+      <a href="#contact" class="btn-pricing btn-pricing-dark">Get Started</a>
+    </div>
+    <div class="pricing-card reveal">
+      <div class="pricing-plan">Enterprise</div>
+      <div class="pricing-price"><span>$</span>2000<small>/mo</small></div>
+      <div class="pricing-period">For large scale businesses</div>
+      <ul class="pricing-features">
+        <li>Unlimited Projects</li>
+        <li>Full Design System</li>
+        <li>Dedicated Designer</li>
+        <li>Unlimited Revisions</li>
+        <li>24/7 Support</li>
+        <li>1 Day Delivery</li>
+      </ul>
+      <a href="#contact" class="btn-pricing btn-pricing-outline">Get Started</a>
+    </div>
+  </div>
+</section> -->
+
+<!-- ========================
+CONTACT SECTION
+======================== -->
+<section class="contact" id="contact">
+  
+  <div class="contact-grid">
+    
+    <!-- CONTACT INFO -->
+    <div class="contact-info">
+      
+      <div class="section-tag reveal">
+        Bog‘lanish
+      </div>
+      
+      <h2 class="section-title reveal">
+        Keyingi <span class="green">Loyihangiz</span><br>
+        Uchun Bog‘laning
+      </h2>
+      
+      <p class="reveal">
+        Loyihangizni hayotga tatbiq etishga tayyormisiz?
+        Keling, birgalikda zamonaviy va kreativ loyiha yaratamiz.
+      </p>
+      
+      <!-- LOCATION -->
+      <div class="contact-detail reveal">
+        
+        <div class="contact-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        
+        <div class="contact-detail-text">
+          <div class="label">Manzil</div>
+          <div class="val">Toshkent, O‘zbekiston</div>
+        </div>
+        
+      </div>
+      
+      <!-- EMAIL -->
+      <div class="contact-detail reveal">
+        
+        <div class="contact-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        
+        <div class="contact-detail-text">
+          <div class="label">Email</div>
+          <div class="val">abdulaziz@gmail.com</div>
+        </div>
+        
+      </div>
+      
+      <!-- PHONE -->
+      <div class="contact-detail reveal">
+        
+        <div class="contact-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        
+        <div class="contact-detail-text">
+          <div class="label">Telefon</div>
+          <div class="val">+998 90 123 45 67</div>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <!-- FORM -->
+    <div class="contact-form reveal">
+      
+      <div class="form-row">
+        
+        <div class="form-group">
+          <label>Ismingiz</label>
+          
+          <input type="text" placeholder="Abdulaziz">
+        </div>
+        
+        <div class="form-group">
+          <label>Email Manzil</label>
+          
+          <input type="email" placeholder="example@gmail.com">
+        </div>
+        
+      </div>
+      
+      <!-- BUDGET -->
+      <div class="form-group">
+        
+        <label>Loyiha Budjeti</label>
+        
+        <select>
+          <option>Budjetni tanlang</option>
+          <option>$100 – $500</option>
+          <option>$500 – $1,000</option>
+          <option>$1,000 – $5,000</option>
+          <option>$5,000+</option>
+        </select>
+        
+      </div>
+      
+      <!-- PROJECT TYPE -->
+      <div class="form-group">
+        
+        <label>Loyiha Turi</label>
+        
+        <input type="text"
+        placeholder="Website, Frontend, UI Design...">
+        
+      </div>
+      
+      <!-- MESSAGE -->
+      <div class="form-group">
+        
+        <label>Xabar</label>
+        
+        <textarea
+        placeholder="Loyihangiz haqida yozing..."></textarea>
+        
+      </div>
+      
+      <!-- BUTTON -->
+      <button class="btn-submit" onclick="handleSubmit()">
+        
+        <i class="fas fa-paper-plane"></i>
+        Xabar Yuborish
+        
+      </button>
+      
+    </div>
+    
+  </div>
+  
+</section>
+<!-- ========================
+TESTIMONIALS SECTION
+======================== -->
+
+
+<!-- ========================
+BLOG SECTION
+======================== -->
+
+<!-- ========================
+FAQ SECTION
+======================== -->
+
+</main>
+<!-- ========================
+FOOTER
+======================== -->
+<footer id="footer">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="footer-logo">Abdulaziz<span>Umarov</span></div>
+      <p>Creating digital experiences that inspire and engage. Based in New York, working worldwide.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn"><i class="fab fa-dribbble"></i></a>
+        <a href="#" class="social-btn"><i class="fab fa-behance"></i></a>
+        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-btn"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#blog">Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#">UI/UX Design</a></li>
+        <li><a href="#">Web Design</a></li>
+        <li><a href="#">App Design</a></li>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Branding</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="#">New York, USA</a></li>
+        <li><a href="#">hello@oliverscott.com</a></li>
+        <li><a href="#">+1 (555) 000-1234</a></li>
+        <li><a href="#">Mon–Fri: 9am–6pm</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <a href="#">Oliver Scott</a>. All rights reserved.</p>
+    <p>Designed with <span class="green">♥</span> in New York</p>
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<div class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fas fa-arrow-up"></i>
+</div>
+
+<!-- JS Files -->
+<script src="js/cursor.js"></script>
+<script src="js/navbar.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/portfolio.js"></script>
+<script src="js/faq.js"></script>
+<script src="js/contact.js"></script>
+<script src="js/ticker.js"></script>
+</body>
+</html>
